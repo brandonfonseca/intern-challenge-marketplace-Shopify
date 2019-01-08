@@ -16,5 +16,6 @@ Product.create([{title: "Apple", price: 0.50, inventory_count: 30},
                 {title: "Swiffer Mop", price: 17, inventory_count: 8},
                 {title: "Tissue Box", price: 2.75, inventory_count: 23},
                 {title: "Tortillas", price: 1.75, inventory_count: 53},
-                {title: "KitKat Bar", price: 1.10, inventory_count: 35}
+                {title: "KitKat Bar", price: 1.10, inventory_count: 35},
+                {title: "Bread", price: 2.00, inventory_count: 0}
                ])
