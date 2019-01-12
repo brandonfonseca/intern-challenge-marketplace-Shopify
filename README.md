@@ -59,7 +59,7 @@ The purpose of this application is to simulate the backend of an online shopping
      
 3. To view your current cart use the following GET request: `http://127.0.0.1:3000/api/v1/viewcart`. Subtotals are shown for each product, and the grand total of the cart is also returned. 
 
-4. To checkout the items in your cart use the following GET request: `http://127.0.0.1:3000/api/v1/checkout`. Checking out your cart will reduce the inventory count by the specified quantity
+4. To checkout the items in your cart use the following GET request: `http://127.0.0.1:3000/api/v1/checkout`. "Checking out" your cart will reduce the inventory count by the specified quantity
 
 
 # Thought Process
