@@ -35,6 +35,8 @@ The purpose of this application is to simulate the backend of an online shopping
 
 2. To view a JSON list of inventory (excluding items with zero stock) use the following GET request `http://127.0.0.1:3000/api/v1/show?instock=true` (ensure that the "3000" in the URL is replaced with the port number you specifed when running the local Rails server)
 
+3. To view a single product's information use the following GET request `http://127.0.0.1:3000/api/v1/show?name=Apple` If an invalid name    is specified, the appropriate error message will be returned.  
+
 
 **Creating a cart and purchasing products:**
 
