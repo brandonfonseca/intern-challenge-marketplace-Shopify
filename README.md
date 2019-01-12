@@ -27,7 +27,7 @@ Ubuntu: `https://www.digitalocean.com/community/tutorials/how-to-install-and-use
 
 9. Now we are ready to start the rails server. Run `rails s` to start the server on the default port (which is usually port 3000). If you would like to specify the port use `rails s -p [port number here]`
 
-10. Now that our API is running, we need a method to query this API. This can be done many ways (including cURL requests, using a browser, or a dedicated application). If you are using MacOS or Ubuntu I suggest you download `Postman` as it provides a nice GUI for API requests.
+10. Now that our API is running, we need a method to query this API. This can be done in many ways (including cURL requests, using a browser, or a dedicated application). If you are using MacOS or Ubuntu I suggest you download `Postman` as it provides a nice GUI for API requests.
 
 11. That completes the setup! To learn how to use this application, please see the "Usage Guide" section of this README
 
@@ -39,9 +39,9 @@ The purpose of this application is to simulate the backend of an online shopping
 
 **Viewing inventory:**
 
-1. To view a JSON list of inventory (including items with zero stock) use the following GET request `http://127.0.0.1:3000/api/v1/show` (ensure that the "3000" in the URL is replaced with the port number you specifed when running the local Rails server)
+1. To view a JSON list of inventory (including items with zero stock) use the following GET request `http://127.0.0.1:3000/api/v1/show` (ensure that the "3000" in the URL is replaced with the port number you specified when running the local Rails server)
 
-2. To view a JSON list of inventory (excluding items with zero stock) use the following GET request `http://127.0.0.1:3000/api/v1/show?instock=true` (ensure that the "3000" in the URL is replaced with the port number you specifed when running the local Rails server)
+2. To view a JSON list of inventory (excluding items with zero stock) use the following GET request `http://127.0.0.1:3000/api/v1/show?instock=true` (ensure that the "3000" in the URL is replaced with the port number you specified when running the local Rails server)
 
 3. To view a single product's information use the following GET request `http://127.0.0.1:3000/api/v1/show?name=Apple` If an invalid name    is specified, the appropriate error message will be returned.  
 
@@ -68,12 +68,12 @@ The purpose of this application is to simulate the backend of an online shopping
 
 - Since no front-end was required for this project, when creating a new rails application, I configured it with the sole purpose of being  an API
 
-- If at a later date, a front-end was required, I would crete a seperate React application and have it query the Rails API to            retrieve/post back-end data
+- If at a later date, a front-end was required, I would create a separate React application and have it query the Rails API to            retrieve/post back-end data
 
-- When creating the rails application, I decided to use PostgreSQL as the primary database client. This is because PostgreSQL works well with Heroku, if this application had to be deployed. Additionally, PostgreSQL is much better for a larger-scale application in comparison to the default rails database client, sqlite3
+- When creating the rails application, I decided to use PostgreSQL as the primary database client. This is because PostgreSQL works well with Heroku if this application had to be deployed. Additionally, PostgreSQL is much better for a larger-scale application in comparison to the default rails database client, sqlite3
 
 - To make things simple for the user testing the application, I configured a seeds.rb file. This file populates the database with default values so that the user doesn't have to populate the database manually with mock data
 
-- A minor change I made to the application specification is that I allow user's to add a specified quantity of an item to their cart, rather than just one. This change better refelcts a real-world ecommerce experience
+- A minor change I made to the application specification is that I allow users to add a specified quantity of an item to their cart, rather than just one. This change better reflects a real-world e-commerce experience
 
-- Since a member from the Shopify team will be reviewing my code, I focused more towards readability rather than performance. Additionally, since this project was fairly small-scale, small differences in runtime efficency are negligible. However, in a real-world, large-scale application, I understand how important it is to optimize runtime. Even a small efficency change on a large-scale system can make a massive difference in overall runtime.
+- Since a member from the Shopify team will be reviewing my code, I focused more on readability rather than performance. Additionally, since this project was fairly small-scale, small differences in runtime efficiency are negligible. However, in a real-world, large-scale application, I understand how important it is to optimize runtime. Even a small efficiency change on a large-scale system can make a massive difference in overall runtime.
