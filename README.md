@@ -1,9 +1,10 @@
 # Table of Contents
 
-[In] (https://github.com/brandonaf/intern-challenge-marketplace-Shopify/blob/master/README.md#installation-instructions)
+[Installation Instructions](https://github.com/brandonaf/intern-challenge-marketplace-Shopify#installation-instructions)
 
+[Usage Guide](https://github.com/brandonaf/intern-challenge-marketplace-Shopify#usage-guide)
 
-
+[Thought Process](https://github.com/brandonaf/intern-challenge-marketplace-Shopify#thought-process)
 
 
 # Installation Instructions
