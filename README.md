@@ -33,10 +33,15 @@ Things you may want to cover:
 MacOS `https://medium.com/@Umesh_Kafle/postgresql-and-postgis-installation-in-mac-os-87fa98a6814d`
 
 Ubuntu `https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04`
+
 6. In the application directory run `rake db:create` to create the database
+
 7. Now run `rake db:migrate` to create the necessary tables. 
+
 8. In order to seed the database with default mock data (used for testing the application) run `rake db:seed`
+
 9. Now we are ready to start the rails server. Run `rails s` to start the server on the default port (which is usually port 3000). If you would like to specify the port use `rails s -p [port number here]`
+
 10. That completes the setup! To learn how to use this application, please see the "Usage Guide" section of this README
 
 # Usage Guide
