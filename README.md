@@ -1,6 +1,6 @@
 # Table of Contents
 
-[Installation Instructions] (https://github.com/brandonaf/intern-challenge-marketplace-Shopify/blob/master/README.md#installation-instructions)
+[In] (https://github.com/brandonaf/intern-challenge-marketplace-Shopify/blob/master/README.md#installation-instructions)
 
 
 
