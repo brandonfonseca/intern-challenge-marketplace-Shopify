@@ -53,3 +53,19 @@ The purpose of this application is to simulate the backend of an online shopping
 
 4. To checkout the items in your cart use the following GET request: `http://127.0.0.1:3000/api/v1/checkout`. Checking out your cart will reduce the inventory count by the specified quantity
 
+
+# Thought Process
+
+- To develop this API I decided to use the Ruby on Rails framework as I have plenty of experience developing in it, and it is used at     Shopify. 
+
+- Since no front-end was required for this project, when creating a new rails application, I configured it with the sole purpose of being  an API
+
+- If at a later date, a front-end was required, I would crete a seperate React application and have it query the Rails API to            retrieve/post back-end data
+
+- When creating the rails application, I decided to use PostgreSQL as the primary database client. This is because PostgreSQL works well with Heroku, if this application had to be deployed. Additionally, PostgreSQL is much better for a larger-scale application in comparison to the default rails database client, sqlite3
+
+- To make things simple for the user testing the application, I configured a seeds.rb file. This file populates the database with default values so that the user doesn't have to populate the database manually with mock data
+
+- A minor change I made to the application specification is that I allow user's to add a specified quantity of an item to their cart, rather than just one. This change better refelcts a real-world ecommerce experience
+
+- Since a member from the Shopify team will be reviewing my code, I focused more towards readability rather than performance. Additionally, since this project was fairly small-scale, small differences in runtime efficency are negligible. However, in a real-world, large-scale application, I understand how important it is to optimize runtime. Even a small efficency change on a large-scale system can make a massive difference in overall runtime.
