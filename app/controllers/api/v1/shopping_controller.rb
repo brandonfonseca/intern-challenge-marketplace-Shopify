@@ -4,8 +4,8 @@ module Api::V1
     #returns a JSON of either a single product or a list of products. If the user requests to see an entire list of products, they can specify if they only  want to see products that are in stock
     def show
       stocked_products_only = params["instock"]
-      name = params["name"].to_s
-      name.capitalize!
+      name = params["name"]
+      name.capitalize! if name.present?
       if name.present? || name == ""
         @products = Product.find_by(title: name)
         @products = {"Error": "Product with that name was not found in our database"} if @products.nil?
