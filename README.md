@@ -82,13 +82,13 @@ Keep in mind that the following queries can be used for either the deployed vers
 
 - To develop this API I decided to use the Ruby on Rails framework as I have plenty of experience developing in it, and it is used at     Shopify. 
 
-- Since no front-end was required for this project, when creating a new rails application, I configured it with the sole purpose of being  an API
+- Since no front-end was required for this project, when creating a new Rails application, I configured it with the sole purpose of being  an API
 
 - If at a later date, a front-end was required, I would create a separate React application and have it query the Rails API to            retrieve/post back-end data
 
-- When creating the rails application, I decided to use PostgreSQL as the primary database client. This is because PostgreSQL works well with deployment services such as Heroku. Additionally, PostgreSQL is much better for a larger-scale application in comparison to the default rails database client, sqlite3
+- When creating the Rails application, I decided to use PostgreSQL as the primary database client. This is because PostgreSQL works well with deployment services such as Heroku. Additionally, PostgreSQL is much better for a larger-scale application in comparison to the default Rails database client, sqlite3
 
-- To make things simple for the user testing the application locally, I configured a seeds.rb file. This file populates the database with default values so that the user doesn't have to populate the database manually with mock data
+- To make things simple for users testing the application locally, I configured a seeds.rb file. This file populates the database with default values so that the user doesn't have to populate the database manually with mock data
 
 - A minor change I made to the application specification is that I allow users to add a specified quantity of an item to their cart, rather than just one. This change better reflects a real-world e-commerce experience
 
