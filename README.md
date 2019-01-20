@@ -1,5 +1,7 @@
 # Table of Contents
 
+[Introduction] ()
+
 [Local Installation Instructions](https://github.com/brandonaf/intern-challenge-marketplace-Shopify#installation-instructions)
 
 [Usage Guide](https://github.com/brandonaf/intern-challenge-marketplace-Shopify#usage-guide)
@@ -7,7 +9,13 @@
 [Thought Process](https://github.com/brandonaf/intern-challenge-marketplace-Shopify#thought-process)
 
 # Introduction
+Hello, I'm Brandon! Thank you for reviewing my coding challenge submission. 
 
+- The purpose of this application is to simulate the backend of an online shopping experience. Using this API one can view a list of inventory, create a cart, and purchase products in the cart.
+
+- The application has been deployed to a Google Cloud instance, thus eliminating the need for local installation. However, if you would like to install it locally for testing purposes, detailed  [Installation Instructions](https://github.com/brandonaf/intern-challenge-marketplace-Shopify#installation-instructions) have been included in this README.
+
+- For a deeper look into my thought process, and for explanations behind the decissions I made, please see the [Thought Process](https://github.com/brandonaf/intern-challenge-marketplace-Shopify#thought-process) section. 
 
 
 
@@ -37,15 +45,15 @@ Ubuntu: `https://www.digitalocean.com/community/tutorials/how-to-install-and-use
 
 # Usage Guide
 
-The purpose of this application is to simulate the backend of an online shopping experience. Using this API one can view a list of inventory, create a cart, and purchase products in the cart. 
 
-Keep in mind that the following queries can be used for either the deployed version of the application, or a local version. If testing locally, ensure that the URL for the requests is changed to reference the local host ip address which is `127.0.0.1`.  
+
+Keep in mind that the following queries can be used for either the deployed version of the application, or a local version. If testing locally, ensure that the URL for the requests is changed to reference the local host IP address which is `127.0.0.1`. Also, ensure that the "3000" in the URL is replaced with the port number you specified when running the local Rails server. 
 
 
 
 **Viewing inventory:**
 
-1. To view a JSON list of inventory (including items with zero stock) use the following GET request `http://34.73.21.104:3000/api/v1/show` (if testing locally, ensure that the "3000" in the URL is replaced with the port number you specified when running the local Rails server)
+1. To view a JSON list of inventory (including items with zero stock) use the following GET request `http://34.73.21.104:3000/api/v1/show`
 
 2. To view a JSON list of inventory (excluding items with zero stock) use the following GET request `http://34.73.21.104:3000/api/v1/show?instock=true`
 
@@ -81,5 +89,7 @@ Keep in mind that the following queries can be used for either the deployed vers
 - To make things simple for the user testing the application locally, I configured a seeds.rb file. This file populates the database with default values so that the user doesn't have to populate the database manually with mock data
 
 - A minor change I made to the application specification is that I allow users to add a specified quantity of an item to their cart, rather than just one. This change better reflects a real-world e-commerce experience
+
+- To make the API more secure, I configured the server's firewall in such a way to prevent unauthorized requests from reaching the backend. Additionally, when creating the `routes.rb` file, I only configured routes that I expect the user to use. This prevents someone from altering the database in an unexpected manner.  
 
 - Since a member from the Shopify team will be reviewing my code, I focused more on readability rather than performance. Additionally, since this project was fairly small-scale, small differences in runtime efficiency are negligible. However, in a real-world, large-scale application, I understand how important it is to optimize runtime. Even a small efficiency change on a large-scale system can make a massive difference in overall runtime.
