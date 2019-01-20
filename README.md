@@ -1,18 +1,22 @@
 # Table of Contents
 
-[Installation Instructions](https://github.com/brandonaf/intern-challenge-marketplace-Shopify#installation-instructions)
+[Local Installation Instructions](https://github.com/brandonaf/intern-challenge-marketplace-Shopify#installation-instructions)
 
 [Usage Guide](https://github.com/brandonaf/intern-challenge-marketplace-Shopify#usage-guide)
 
 [Thought Process](https://github.com/brandonaf/intern-challenge-marketplace-Shopify#thought-process)
 
+# Introduction
 
-# Installation Instructions
+
+
+
+# Local Installation Instructions
 
 1. Ensure your Rails version is >= 5.2.2 and your Ruby version is >= 2.5.1
 2. Navigate to where you would like to install the project on your computer and use `mkdir intern-challenge-marketplace-Shopify` to make a folder
 3. Navigate to the newly created folder using `cd intern-challenge-marketplace-Shopify`
-4. Clone this repository into the folder using `git clone [SSH or HTTPS github cloning link]`
+4. Clone this repository into the folder using `git clone [cloning link]`
 5. PostgreSQL is used as the primary database for this application. Please ensure PostgreSQL is installed on your machine. If it is not please install it using the following tutorials:
 
 MacOS: `https://medium.com/@Umesh_Kafle/postgresql-and-postgis-installation-in-mac-os-87fa98a6814d`
@@ -35,31 +39,33 @@ Ubuntu: `https://www.digitalocean.com/community/tutorials/how-to-install-and-use
 
 The purpose of this application is to simulate the backend of an online shopping experience. Using this API one can view a list of inventory, create a cart, and purchase products in the cart. 
 
+Keep in mind that the following queries can be used for either the deployed version of the application, or a local version. If testing locally, ensure that the URL for the requests is changed to reference the local host ip address which is `127.0.0.1`.  
+
 
 
 **Viewing inventory:**
 
-1. To view a JSON list of inventory (including items with zero stock) use the following GET request `http://127.0.0.1:3000/api/v1/show` (ensure that the "3000" in the URL is replaced with the port number you specified when running the local Rails server)
+1. To view a JSON list of inventory (including items with zero stock) use the following GET request `http://34.73.21.104:3000/api/v1/show` (if testing locally, ensure that the "3000" in the URL is replaced with the port number you specified when running the local Rails server)
 
-2. To view a JSON list of inventory (excluding items with zero stock) use the following GET request `http://127.0.0.1:3000/api/v1/show?instock=true` (ensure that the "3000" in the URL is replaced with the port number you specified when running the local Rails server)
+2. To view a JSON list of inventory (excluding items with zero stock) use the following GET request `http://34.73.21.104:3000/api/v1/show?instock=true`
 
-3. To view a single product's information use the following GET request `http://127.0.0.1:3000/api/v1/show?name=Apple` If an invalid name    is specified, the appropriate error message will be returned.  
+3. To view a single product's information use the following GET request `http://34.73.21.104:3000/api/v1/show?name=Apple` If an invalid name is specified, the appropriate error message will be returned.  
 
 
 **Creating a cart and purchasing products:**
 
-1. To create a new cart use the following GET request `http://127.0.0.1:3000/api/v1/newcart`
+1. To create a new cart use the following GET request `http://34.73.21.104:3000/api/v1/newcart`
 
-2. To add an item to your cart use the following GET request: `http://127.0.0.1:3000/api/v1/add?name=Kitkat+bar&quantity=5`
+2. To add an item to your cart use the following GET request: `http://34.73.21.104:3000/api/v1/add?name=Kitkat+bar&quantity=5`
      
      - In the URL enter the name of the product you wish to add to your cart in the `name` argument (if the name has a space ensure you           use a "+" between the words)
      - In the URL enter the quantity of the product you wish to add to your cart in the `quantity` argument
      
      - If an invalid name or quantity is requested the API will not allow you to add the item to the cart, and will return the appropriate        error message
      
-3. To view your current cart use the following GET request: `http://127.0.0.1:3000/api/v1/viewcart`. Subtotals are shown for each product, and the grand total of the cart is also returned. 
+3. To view your current cart use the following GET request: `http://34.73.21.104:3000/api/v1/viewcart`. Subtotals are shown for each product, and the grand total of the cart is also returned. 
 
-4. To checkout the items in your cart use the following GET request: `http://127.0.0.1:3000/api/v1/checkout`. "Checking out" your cart will reduce the inventory count by the specified quantity
+4. To checkout the items in your cart use the following GET request: `http://34.73.21.104:3000/api/v1/checkout`. "Checking out" your cart will reduce the inventory count by the specified quantity
 
 
 # Thought Process
@@ -70,9 +76,9 @@ The purpose of this application is to simulate the backend of an online shopping
 
 - If at a later date, a front-end was required, I would create a separate React application and have it query the Rails API to            retrieve/post back-end data
 
-- When creating the rails application, I decided to use PostgreSQL as the primary database client. This is because PostgreSQL works well with Heroku if this application had to be deployed. Additionally, PostgreSQL is much better for a larger-scale application in comparison to the default rails database client, sqlite3
+- When creating the rails application, I decided to use PostgreSQL as the primary database client. This is because PostgreSQL works well with deployment services such as Heroku. Additionally, PostgreSQL is much better for a larger-scale application in comparison to the default rails database client, sqlite3
 
-- To make things simple for the user testing the application, I configured a seeds.rb file. This file populates the database with default values so that the user doesn't have to populate the database manually with mock data
+- To make things simple for the user testing the application locally, I configured a seeds.rb file. This file populates the database with default values so that the user doesn't have to populate the database manually with mock data
 
 - A minor change I made to the application specification is that I allow users to add a specified quantity of an item to their cart, rather than just one. This change better reflects a real-world e-commerce experience
 
