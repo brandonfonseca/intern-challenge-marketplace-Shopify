@@ -15,6 +15,8 @@ Hello, I'm Brandon! Thank you for reviewing my coding challenge submission.
 
 - The purpose of this application is to simulate the backend of an online shopping experience. Using this API one can view a list of inventory, create a cart, and purchase products in the cart.
 
+- There is error handling throughout the entirety of the application to ensure that the user does not change the database in an unexpected manner. Additionally, there are appropriate error messages that are returned, so that the user understands if they have done something wrong.  
+
 - The application has been deployed to a Google Cloud instance, thus eliminating the need for local installation. However, if you would like to install it locally for testing purposes, detailed  [Installation Instructions](https://github.com/brandonaf/intern-challenge-marketplace-Shopify#installation-instructions) have been included in this README.
 
 - For a deeper look into my thought process, and for explanations behind the decissions I made, please see the [Thought Process](https://github.com/brandonaf/intern-challenge-marketplace-Shopify#thought-process) section. 
